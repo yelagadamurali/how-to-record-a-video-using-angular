@@ -1,0 +1,76 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+a {
+  color: #0366d6;
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+code {
+  color: #e01a76;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.fc-listWeek-button {
+}
+
+.fc-dayGridMonth-button {
+}
+
+
+.fc-timeGridWeek-button {
+}
+
+
+.fc-timeGridDay-button {
+}
+
+.fc-listWeek-button fc-button-active {
+  background-color: steelblue !important;
+}
+
+
+.spinner {
+  width: 4em;
+  height: 4em;
+  border: 0.5em solid rgba(0, 0, 0, 0.1);
+  border-left-color: #7983ff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.boxs {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(2px); /* Add the backdrop blur effect */
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+ .loader-text-styles {
+  text-align: center;
+  font-weight: bold;
+  color: #7983ff; 
+}
+

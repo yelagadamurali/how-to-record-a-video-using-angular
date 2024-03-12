@@ -1,0 +1,62 @@
+<!--<div class="card flex justify-content-center">
+  <p-progressSpinner ariaLabel="loading"></p-progressSpinner>
+</div>-->
+<body>
+  <app-nav-menu></app-nav-menu>
+  <main class="container">
+    <router-outlet></router-outlet>
+    <div *ngIf="showLoader" class="boxs">
+      <div class="spinner"></div>
+      <p class="loader-text-styles">Video Uploading...</p>
+    </div>
+  </main>
+</body>
+<div style="text-align:center">
+  <!--<p-progressSpinner *ngIf="showLoader" class="boxs" ariaLabel="loading"></p-progressSpinner>-->
+  <!--<div *ngIf="showLoader" class="boxs">
+    <div class="spinner">
+    </div>
+  </div>-->
+  <h1 style="margin-bottom:30px;">Video Recording</h1>
+  <video class="video" #liveVideo autoplay controls></video>
+  <span class="m-1"></span>
+  <video class="video" style="width:480px !important;" controls #recordedVideo></video>
+  <br>
+  <div class="mb-4">
+    <button class="btn btn-success btn-lg" *ngIf="!isRecording" (click)="startRecording()">Start Recording</button>
+    <button class="btn btn-warning btn-lg " *ngIf="isRecording" (click)="stopRecording()">Stop Recording</button>
+    <button class="btn btn-primary btn-lg ms-4 " style="margin-left:10px;" (click)="playRecording()">Upload Video</button>
+    <!--<progress #uploadProgressBar [value]="uploadProgress" max="100"></progress>-->
+    <!--<progress #uploadProgressBar *ngIf="showProgressBar" [value]="uploadProgress" max="100"></progress>-->
+    <!--<p-progressBar *ngIf="progressValue < 100" [value]="progressValue"></p-progressBar>
+    <div *ngIf="progressValue < 100">
+      <ng-container *ngFor="let _ of [].constructor(100); let i=index">
+        <ng-container *ngIf="i <= progressValue">
+           Show something here to simulate progress
+        </ng-container>
+      </ng-container>
+    </div>
+    <p-progressBar *ngIf="progressValue === 100" [value]="progressValue"></p-progressBar>-->
+    <!--<progress #uploadProgress value="0" max="100"></progress>-->
+    <!--<div *ngIf="uploadProgress !== 0">
+    <span class="card mt-2">
+      <p-progressBar [value]="uploadProgress"></p-progressBar>
+    </span>-->
+    <!--<span>Please wait, it will take a moment.</span>
+    <ng-template pTemplate="footer">
+      <p-button title="Click to close" (click)="displayUploadFile=false" label="Close" styleClass="p-button-text"></p-button>
+    </ng-template>-->
+    <!--</div>-->
+  </div>
+  <!--<input type="button" class="btn btn-primary btn-lg ms-4 " (click)="playRecording()" title="Click here Upload Video">
+  <div *ngIf="uploadProgress !== 0">
+    <span class="card mt-2">-->
+  <!--<p-progressBar [value]="uploadProgress"></p-progressBar>-->
+  <!--<progress #uploadProgress value="{{ uploadProgress }}" max="100"></progress>
+
+    </span>
+    <span>Please wait, it will take a moment.</span>
+  </div>-->
+  <!--<input type="file" webkitdirectory multiple (change)="playRecording()" title="Click here to hoose Folder">-->
+  <!--</div>-->
+</div>
